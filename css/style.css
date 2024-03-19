@@ -38,8 +38,8 @@ h4, h5, h6, .h4, .h5, .h6 {
 }
 
 .py-6 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
 }
 
 .wow,
@@ -98,12 +98,17 @@ h4, h5, h6, .h4, .h5, .h6 {
 
 /*** Navbar Start ***/
 .nav-bar {
-    background: var(--bs-light);
+    background: #f8f8f8;
     border-bottom: 1px solid rgba(0, 0, 0, .05);
+    top: 0;
+    z-index: 3;
+    position: sticky;
+    height: 12vh;
 }
 
 .navbar .navbar-nav .nav-link {
-    padding: 10px 12px;
+    padding: 10px 30px;
+    margin-top: 10px;
     font-weight: 600;
     font-size: 17px;
     transition: .5s;
