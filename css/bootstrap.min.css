@@ -6899,7 +6899,8 @@ fieldset:disabled .btn {
   background-color: #dc3545 !important;
 }
 .bg-light {
-  background-color: #fffcf8 !important;
+  /* background-color: #fffcf8 !important; */
+  background: transparent linear-gradient(180deg, #fff, #ebf2fc);
 }
 .bg-dark {
   background-color: #050709 !important;

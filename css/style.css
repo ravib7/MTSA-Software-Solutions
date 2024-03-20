@@ -1,4 +1,5 @@
 
+
 /*** Spinner Start ***/
 #spinner {
     opacity: 0;
@@ -13,7 +14,6 @@
      opacity: 1;
  }
 /*** Spinner End ***/
-
 
 .back-to-top {
     position: fixed;
@@ -38,7 +38,7 @@ h4, h5, h6, .h4, .h5, .h6 {
 }
 
 .py-6 {
-    padding-top: 1rem;
+    padding-top: 0rem;
     padding-bottom: 5rem;
 }
 
@@ -99,16 +99,16 @@ h4, h5, h6, .h4, .h5, .h6 {
 /*** Navbar Start ***/
 
 .nav-bar {
-    background-color: #ffffff; 
-    transition: box-shadow 0.3s ease; 
-  }
-  
-  .nav-bar.shadow {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); 
-  }
+    background-color: #ffffff;
+    transition: box-shadow 0.3s ease;
+}
+
+.nav-bar.shadow {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
   
 .nav-bar {
-    background: #f8f8f8;
+    /* background: #f8f8f8; */
     border-bottom: 1px solid rgba(0, 0, 0, .05);
     top: 0;
     z-index: 4;
@@ -164,6 +164,7 @@ h4, h5, h6, .h4, .h5, .h6 {
 #searchModal .modal-content {
     background-color: rgba(255, 255, 255, .95);
 }
+
 /*** Navbar End ***/
 
 
@@ -228,7 +229,7 @@ h4, h5, h6, .h4, .h5, .h6 {
 }
 
 .service-item:hover .service-content-icon i {
-    color: var(--bs-dark) !important;
+    color: var(--bs-white) !important;
 }
 
 .service-item:hover .service-content-icon p {

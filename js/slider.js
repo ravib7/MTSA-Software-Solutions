@@ -26,12 +26,21 @@ let currentIndex = 0;
 
   // Navbar Shadow
 
+  // window.addEventListener('scroll', function() {
+  //   var navbar = document.getElementById('navbar');
+  //   if (window.scrollY > 0) {
+  //     navbar.classList.add('shadow'); // Add shadow class when scrolled
+  //   } else {
+  //     navbar.classList.remove('shadow'); // Remove shadow class when back to top
+  //   }
+  // });
+
   window.addEventListener('scroll', function() {
-    var navbar = document.getElementById('navbar');
+    var navbar = document.querySelector('.nav-bar');
     if (window.scrollY > 0) {
-      navbar.classList.add('shadow'); // Add shadow class when scrolled
+        navbar.classList.add('shadow');
     } else {
-      navbar.classList.remove('shadow'); // Remove shadow class when back to top
+        navbar.classList.remove('shadow');
     }
-  });
+});
   
