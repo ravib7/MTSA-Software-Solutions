@@ -3,144 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Image Slider with Text and Video</title>
+<title>Heartbeat Button Effect</title>
 <style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    font-family: Arial, sans-serif;
-  }
-
-  .slider {
+  .heartbeat-button {
+    border: 2px solid transparent;
+    border-radius: 50%;
     position: relative;
-    width: 100%;
-    max-width: 800px; /* Adjust max-width as needed */
-    margin: auto;
     overflow: hidden;
-  }
-
-  .slide {
-    display: none;
-    align-items: center;
-    flex-direction: column;
-    height: 300px; /* Adjust height as needed */
-    background-color: #f0f0f0;
-    overflow: hidden;
-    text-align: center;
-    position: relative;
-  }
-
-  .slide.active {
-    display: flex;
-  }
-
-  .text {
-    padding: 20px;
-  }
-
-  .media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-
-  .media img,
-  .media video {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .controls {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-  }
-
-  .controls button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    margin-right: 5px;
+    background-color: transparent;
+    color: #000;
     cursor: pointer;
+    animation: heartbeat 1s infinite;
   }
 
-  .controls button:hover {
-    background-color: #45a049;
+  .heartbeat-button::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(-45deg, red, pink);
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
   }
 </style>
 </head>
 <body>
 
-<div class="slider">
-  <div class="slide active">
-    <div class="text">
-      <h2>Slide 1</h2>
-      <p>This is some text on the left side of the slider.</p>
-    </div>
-    <div class="media">
-      <img src="https://via.placeholder.com/400" alt="Image">
-    </div>
-    <div class="controls">
-      <button onclick="prevSlide()">Previous</button>
-      <button onclick="nextSlide()">Next</button>
-    </div>
-  </div>
-  <div class="slide">
-    <div class="text">
-      <h2>Slide 2</h2>
-      <p>This is another slide with some different text.</p>
-    </div>
-    <div class="media">
-      <video autoplay loop muted>
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="controls">
-      <button onclick="prevSlide()">Previous</button>
-      <button onclick="nextSlide()">Next</button>
-    </div>
-  </div>
-  <!-- Add more slides as needed -->
-</div>
-
-<script>
-  let currentIndex = 0;
-  const slides = document.querySelectorAll('.slide');
-  const totalSlides = slides.length;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      if (i === index) {
-        slide.classList.add('active');
-      } else {
-        slide.classList.remove('active');
-      }
-    });
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    showSlide(currentIndex);
-  }
-
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    showSlide(currentIndex);
-  }
-</script>
+<button class="heartbeat-button">Click me</button>
 
 </body>
 </html>
