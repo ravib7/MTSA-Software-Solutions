@@ -6,8 +6,7 @@
 <title>Heartbeat Button Effect</title>
 <style>
   .heartbeat-button {
-    border: 2px solid transparent;
-    border-radius: 50%;
+    border: 2px solid black;
     position: relative;
     overflow: hidden;
     padding: 10px 20px;
@@ -18,7 +17,7 @@
     animation: heartbeat 1s infinite;
   }
 
-  .heartbeat-button::before {
+  /* .heartbeat-button::before {
     content: "";
     position: absolute;
     top: -50px;
@@ -30,7 +29,7 @@
     z-index: -1;
     transform: scale(0);
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
+  } */
 
   @keyframes heartbeat {
     0%, 100% {
