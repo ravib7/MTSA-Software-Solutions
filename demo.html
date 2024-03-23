@@ -3,47 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Heartbeat Button Effect</title>
+<title>Animated Heart Border Button</title>
 <style>
-  .heartbeat-button {
-    border: 2px solid black;
+  .heart-border-btn {
     position: relative;
-    overflow: hidden;
+    display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
+    font-weight: bold;
+    color: red;
     background-color: transparent;
-    color: #000;
+    border: 2px solid transparent; /* Transparent border to create space for the heart shape */
+    outline: none;
     cursor: pointer;
-    animation: heartbeat 1s infinite;
+    overflow: hidden;
+    transition: all 0.3s ease; /* Add transition for smooth animation */
   }
 
-  /* .heartbeat-button::before {
+  .heart-border-btn::before,
+  .heart-border-btn::after {
     content: "";
     position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(-45deg, red, pink);
+    width: 20px; /* Adjust the size of the heart */
+    height: 30px; /* Adjust the size of the heart */
     border-radius: 50%;
-    z-index: -1;
-    transform: scale(0);
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  } */
+    border: 2px solid red; /* Red border to create the heart shape */
+    animation: pulse-heart 1s ease infinite; /* Add animation for pulse effect */
+  }
 
-  @keyframes heartbeat {
-    0%, 100% {
+  .heart-border-btn::before {
+    left: -18px; /* Adjust the positioning of the left part of the heart */
+    top: -8px; /* Adjust the positioning of the top part of the heart */
+  }
+
+  .heart-border-btn::after {
+    left: 16px; /* Adjust the positioning of the right part of the heart */
+    top: -8px; /* Adjust the positioning of the top part of the heart */
+  }
+
+  @keyframes pulse-heart {
+    0% {
       transform: scale(1);
     }
     50% {
-      transform: scale(1.1);
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
     }
   }
 </style>
 </head>
 <body>
 
-<button class="heartbeat-button">Click me</button>
+<button class="heart-border-btn">Click me</button>
 
 </body>
 </html>
