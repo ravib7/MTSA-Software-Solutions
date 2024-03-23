@@ -94,7 +94,24 @@ h4, h5, h6, .h4, .h5, .h6 {
     border-radius: 50px;
     animation: 1500ms ease-out 0s infinite normal none running pulse-border;
 
+<<<<<<< HEAD
 }
+=======
+/* .btn::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: inline;
+    width: 100%;
+    height: 100%;
+    background: var(--bs-primary);
+    border-radius: 50px;
+    transition: all 200ms ease 0s;
+} */
+>>>>>>> f0e43dc01f61c16175939148e57e4a4d8527e9d8
 
 @keyframes pulse-border {
     0% {
